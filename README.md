@@ -80,4 +80,4 @@ travel_assistant/
 ## Acknowledgments  
 - OpenAI for GPT-3.5 conversational AI.  
 - React and Flask for seamless frontend and backend integration.  
-```
+
