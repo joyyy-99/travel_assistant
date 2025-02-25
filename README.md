@@ -31,6 +31,7 @@ cd travel_assistant
 ### 2. Frontend Setup (React)  
 ```bash
 cd frontend
+npm install axios
 npm install
 npm start
 ```
@@ -40,10 +41,13 @@ Open a new terminal and navigate to the backend:
 ```bash
 cd ../backend
 python -m venv venv
-.\venv\Scripts\activate  # On Windows
-source venv/bin/activate  # On MacOS/Linux
+.\venv\Scripts\activate # On Windows
+source venv/bin/activate # On MacOS/Linux
 pip install -r requirements.txt
-flask run
+pip install flask-cors
+pip install openai==0.28 
+pip install python-dotenv
+flask --app app run
 ```
 - Flask server will be running at `http://localhost:5000`  
 ## Environment Variables  
@@ -60,24 +64,23 @@ This project is ready for deployment but is not live yet. Planned platforms:
 travel_assistant/
 │
 ├── backend/
-│   ├── app.py                # Flask backend with OpenAI integration
-│   ├── requirements.txt      # Backend dependencies
-│   └── .env                  # Environment variables (not pushed to GitHub)
+│ ├── app.py # Flask backend with OpenAI integration
+│ ├── requirements.txt # Backend dependencies
+│ └── .env # Environment variables (not pushed to GitHub)
 │
 └── frontend/
     ├── public/
-    │   └── bot_avatar.webp   # Favicon and bot avatar
+    │ └── bot_avatar.webp # Favicon and bot avatar
     │
     ├── src/
-    │   ├── assets/           # Avatar images and other assets
-    │   ├── App.js            # Main React component (Chat Interface)
-    │   ├── App.css           # Styling for Chat Interface
-    │   ├── index.js          # ReactDOM Render
-    │   └── index.css         # Global styles
+    │ ├── assets/ # Avatar images and other assets
+    │ ├── App.js # Main React component (Chat Interface)
+    │ ├── App.css # Styling for Chat Interface
+    │ ├── index.js # ReactDOM Render
+    │ └── index.css # Global styles
     │
-    └── package.json          # Frontend dependencies
+    └── package.json # Frontend dependencies
 ```
 ## Acknowledgments  
 - OpenAI for GPT-3.5 conversational AI.  
-- React and Flask for seamless frontend and backend integration.  
-
+- React and Flask for seamless frontend and backend integration.
