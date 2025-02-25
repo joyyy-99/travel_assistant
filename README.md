@@ -31,8 +31,8 @@ cd travel_assistant
 ### 2. Frontend Setup (React)  
 ```bash
 cd frontend
+npm install 
 npm install axios
-npm install
 npm start
 ```
 - React app will be running at `http://localhost:3000`  
@@ -65,7 +65,6 @@ travel_assistant/
 │
 ├── backend/
 │ ├── app.py # Flask backend with OpenAI integration
-│ ├── requirements.txt # Backend dependencies
 │ └── .env # Environment variables (not pushed to GitHub)
 │
 └── frontend/
