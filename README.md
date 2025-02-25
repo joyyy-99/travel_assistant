@@ -43,7 +43,6 @@ cd ../backend
 python -m venv venv
 .\venv\Scripts\activate # On Windows
 source venv/bin/activate # On MacOS/Linux
-pip install -r requirements.txt
 pip install flask-cors
 pip install openai==0.28 
 pip install python-dotenv
